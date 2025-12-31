@@ -35,7 +35,7 @@ io.on('connection', (socket) => {
     socket.emit('join room success', `You joined room: ${room}`, room);
     socket.to(room).emit('send room message', {
       user: 'System',
-      text: `A new user has joined the room: ${room}`,
+      text: `A New user has joined the room: ${room}`,
       room,
     });
   });
@@ -46,7 +46,7 @@ io.on('connection', (socket) => {
     socket.emit('leave room success', `You left room: ${room}`);
     socket.to(room).emit('send room message', {
       user: 'System',
-      text: `A user has left the room: ${room}`,
+      text: `A User has left the room: ${room}`,
       room,
     });
   });
